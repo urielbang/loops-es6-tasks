@@ -167,38 +167,64 @@
 // }
 
 //11
-document.body.innerHTML += `  <form id="myForm">
-<label for="classNAme">class name:</label>
-<input id="classNAme" type="text" />
+// document.body.innerHTML += `  <form id="myForm">
+// <label for="classNAme">class name:</label>
+// <input id="classNAme" type="text" />
 
-<label for="NumWork">workes num:</label>
-<input id="NumWork" type="number" />
+// <label for="NumWork">workes num:</label>
+// <input id="NumWork" type="number" />
 
-<label for="managerName">name manager:</label>
-<input id="managerName" type="text" />
+// <label for="managerName">name manager:</label>
+// <input id="managerName" type="text" />
+
+// <input id="btn" type="submit" />
+// </form>`;
+// let arr = [];
+// let counter = 0;
+// document.getElementById("myForm").addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   if (counter < 3) {
+//     let Office = {};
+//     Office.class = classNAme.value;
+//     Office.numberWorkers = NumWork.value;
+//     Office.manageNAme = managerName.value;
+//     arr.push(Office);
+//     counter++;
+//     classNAme.value = "";
+//     NumWork.value = "";
+//     managerName.value = "";
+//   }
+
+//   if (counter == 3) {
+//     for (const itemOffice of arr) {
+//       console.log(itemOffice);
+//     }
+//   }
+// });
+
+//12
+document.body.innerHTML = `<button id="btn">click here!</button>`;
+btn.addEventListener("click", () => {
+  document.body.innerHTML += `  <form id="myForm">
+<label for="dateStart">date start:</label>
+<input id="dateStart" type="date" />
+
+<label for="dateEnd">date end:</label>
+<input id="dateEnd" type="date" />
+
+<label for="timeDrive">time drive:</label>
+<input id="timeDrive" type="text" />
 
 <input id="btn" type="submit" />
 </form>`;
-let arr = [];
-let counter = 0;
-document.getElementById("myForm").addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  if (counter < 3) {
-    let Office = {};
-    Office.class = classNAme.value;
-    Office.numberWorkers = NumWork.value;
-    Office.manageNAme = managerName.value;
-    arr.push(Office);
-    counter++;
-    classNAme.value = "";
-    NumWork.value = "";
-    managerName.value = "";
-  }
-
-  if (counter == 3) {
-    for (const itemOffice of arr) {
-      console.log(itemOffice);
-    }
-  }
+  myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let drive = {};
+    drive.dateStart = dateStart.value;
+    drive.dateEnd = dateEnd.value;
+    drive.timeDrive = timeDrive.value;
+    console.log(drive);
+  });
 });
