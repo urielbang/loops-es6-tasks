@@ -165,3 +165,40 @@
 //     }
 //   }
 // }
+
+//11
+document.body.innerHTML += `  <form id="myForm">
+<label for="classNAme">class name:</label>
+<input id="classNAme" type="text" />
+
+<label for="NumWork">workes num:</label>
+<input id="NumWork" type="number" />
+
+<label for="managerName">name manager:</label>
+<input id="managerName" type="text" />
+
+<input id="btn" type="submit" />
+</form>`;
+let arr = [];
+let counter = 0;
+document.getElementById("myForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (counter < 3) {
+    let Office = {};
+    Office.class = classNAme.value;
+    Office.numberWorkers = NumWork.value;
+    Office.manageNAme = managerName.value;
+    arr.push(Office);
+    counter++;
+    classNAme.value = "";
+    NumWork.value = "";
+    managerName.value = "";
+  }
+
+  if (counter == 3) {
+    for (const itemOffice of arr) {
+      console.log(itemOffice);
+    }
+  }
+});
