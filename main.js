@@ -47,11 +47,21 @@
 // }
 
 //7
+document.body.innerHTML += `    <ul>
+<li>israel</li>
+<li>austrita</li>
+<li>america</li>
+<li>russia</li>
+<li>kanda</li>
+<li>georgia</li>
+</ul>
+<button id="btn">click to upper</button>
+`;
+const ulCollection = document.getElementsByTagName("li");
 
-// document.body.innerHTML += `<p>uriel</p>
-// <p>daniel</p>
-// <p>shmhel</p>
-// <p>lior</p>
-// <p>shlomo</p>
-// <button id="btnColor">click here! to color</button>
-// <button id="btnColor">click here! to hello</button>`;
+btn.addEventListener("click", () => {
+  for (const itemLi of ulCollection) {
+    let strTmp = itemLi.innerText.toUpperCase();
+    itemLi.innerText = strTmp;
+  }
+});
