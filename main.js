@@ -204,27 +204,29 @@
 // });
 
 //12
-document.body.innerHTML = `<button id="btn">click here!</button>`;
-btn.addEventListener("click", () => {
-  document.body.innerHTML += `  <form id="myForm">
-<label for="dateStart">date start:</label>
-<input id="dateStart" type="date" />
+// document.body.innerHTML = `<button id="btn">click here!</button>`;
+// btn.addEventListener("click", () => {
+//   document.body.innerHTML += `  <form id="myForm">
+// <label for="dateStart">date start:</label>
+// <input id="dateStart" type="date" />
 
-<label for="dateEnd">date end:</label>
-<input id="dateEnd" type="date" />
+// <label for="dateEnd">date end:</label>
+// <input id="dateEnd" type="date" />
 
-<label for="timeDrive">time drive:</label>
-<input id="timeDrive" type="text" />
+// <label for="timeDrive">time drive:</label>
+// <input id="timeDrive" type="text" />
 
-<input id="btn" type="submit" />
-</form>`;
+// <input id="btn" type="submit" />
+// </form>`;
 
-  myForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let drive = {};
-    drive.dateStart = dateStart.value;
-    drive.dateEnd = dateEnd.value;
-    drive.timeDrive = timeDrive.value;
-    console.log(drive);
-  });
-});
+//   myForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     let drive = {};
+//     drive.dateStart = dateStart.value;
+//     drive.dateEnd = dateEnd.value;
+//     drive.timeDrive = timeDrive.value;
+//     console.log(drive);
+//   });
+// });
+
+//13
