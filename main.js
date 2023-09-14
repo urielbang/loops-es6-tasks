@@ -230,3 +230,107 @@
 // });
 
 //13
+// const cities = [
+//   {
+//     name: "Lod",
+//     numCitizen: 5,
+//     symbol:
+//       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Coat_of_arms_of_Lod.svg/225px-Coat_of_arms_of_Lod.svg.png",
+//     isClosed: false,
+//   },
+//   {
+//     name: "Ramla",
+//     numCitizen: 75,
+//     symbol:
+//       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Coat_of_Arms_of_Ramla.svg/225px-Coat_of_Arms_of_Ramla.svg.png",
+//     isClosed: true,
+//   },
+//   {
+//     name: "Holon",
+//     numCitizen: 198285,
+//     symbol:
+//       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Coat_of_arms_of_Holon.svg/165px-Coat_of_arms_of_Holon.svg.png",
+//     isClosed: true,
+//   },
+//   {
+//     name: "Jeruslem",
+//     numCitizen: 500000,
+//     symbol:
+//       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Emblem_of_Jerusalem.svg/77px-Emblem_of_Jerusalem.svg.png",
+//     isClosed: false,
+//   },
+//   {
+//     name: "Bat yam",
+//     numCitizen: 130000,
+//     symbol:
+//       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Coat_of_arms_of_Bat-Yam.svg/188px-Coat_of_arms_of_Bat-Yam.svg.png",
+//     isClosed: true,
+//   },
+// ];
+// function printALlCityToLog() {
+//   for (const item of cities) {
+//     console.log(item);
+//   }
+// }
+
+// function printTheLAstCity() {
+//   for (const key in cities[3]) {
+//     console.log(cities[cities.length - 1][key]);
+//   }
+// }
+// function printEvryCityInElemnts() {
+//   for (const itemCity of cities) {
+//     document.body.innerHTML += `<div id="myDiv${cities.indexOf(
+//       itemCity
+//     )}"></div>`;
+
+//     document.body.innerHTML += `=`.repeat(160);
+//     for (const key in itemCity) {
+//       if (key.includes("symbol")) {
+//         document.querySelector(
+//           `#myDiv${cities.indexOf(itemCity)}`
+//         ).innerHTML += `<img src="${itemCity[key]}"/>`;
+//       } else {
+//         document.querySelector(
+//           `#myDiv${cities.indexOf(itemCity)}`
+//         ).innerHTML += `${key}: ${itemCity[key]}`;
+//       }
+//     }
+//   }
+// }
+
+// document.body.innerHTML += `<button id="btn">click here !</button>`;
+
+// document.querySelector("#btn").addEventListener("click", () => {
+//   document.body.innerHTML += `<form id="myForm">
+//   <label for="nameInput">name:</label>
+//   <input id="nameInput" type="text" />
+
+//   <label for="numCitizen">citizen number:</label>
+//   <input id="numCitizen" type="number" />
+
+//   <label for="symbolInput">symbol url:</label>
+//   <input id="symbolInput" type="text" />
+
+//   <label for="isClosed">is closed?</label>
+//   <input id="isClosed" type="text" />
+
+//   <input id="btn" type="submit" />
+//   </form>`;
+//   document.querySelector("#myForm").addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const obj = {};
+//     obj.name = nameInput.value;
+//     obj.numCitizen = numCitizen.value;
+//     obj.symbol = symbolInput.value;
+//     obj.isClosed = isClosed.value;
+//     cities.push(obj);
+//     nameInput.value = "";
+//     numCitizen.value = "";
+//     symbolInput.value = "";
+//     isClosed.value = "";
+//     console.log(cities);
+//   });
+// });
+
+//14
