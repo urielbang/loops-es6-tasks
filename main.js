@@ -334,3 +334,88 @@
 // });
 
 //14
+// const studentsArray = [
+//   {
+//     name: "uriel",
+//     date: "15.03.98",
+//     email: "uri@gmail.com",
+//     isPasst: false,
+//   },
+//   {
+//     name: "beni",
+//     date: "16.03.99",
+//     email: "veni@gmail.com",
+//     isPasst: true,
+//   },
+//   {
+//     name: "shkoni",
+//     date: "14.03.2016",
+//     email: "shkoni@gmail.com",
+//     isPasst: false,
+//   },
+//   {
+//     name: "michael",
+//     date: "20.05.1975",
+//     email: "michael@gmail.com",
+//     isPasst: true,
+//   },
+// ];
+// document.body.innerHTML += ` <table id="myTable">
+// <thead>
+//   <tr id="myThead"></tr>
+// </thead>
+// <tbody id="myTbody"></tbody>
+// </table>`;
+
+// for (const key in studentsArray[0]) {
+//   myThead.innerHTML += `<th>${key}</th>`;
+// }
+// for (const item of studentsArray) {
+//   myTbody.innerHTML += `<tr id="tr${studentsArray.indexOf(item)}"></tr>`;
+
+//   for (const key in item) {
+//     document.getElementById(
+//       `tr${studentsArray.indexOf(item)}`
+//     ).innerHTML += `<td>${item[key]}</td>`;
+//   }
+// }
+
+// document.body.innerHTML += `
+// <h2>uriel</h2>
+// <h2>michel</h2>
+// <h2>daniel</h2>
+// <h2>shlomo</h2>
+// <h2>gavriel</h2>
+// <button id="btnColor">change color!</button>
+// <button id="cbtnTxt">change txt</button>
+
+// `;
+// document.getElementById("btnColor").addEventListener("click", () => {
+//   let h2Collection = document.getElementsByTagName("h2");
+//   for (const item of h2Collection) {
+//     item.style.color = "blue";
+//   }
+// });
+// document.getElementById("cbtnTxt").addEventListener("click", () => {
+//   let h2Collection = document.getElementsByTagName("h2");
+//   for (const item of h2Collection) {
+//     item.innerText = "hello";
+//   }
+// });
+
+document.body.innerHTML += `
+ <h2>26</h2>
+ <h2>35</h2>
+ <h2>15</h2>
+ <h2>16</h2>
+ <h2>17</h2>
+ <button id="btnColor">change Young!</button>`;
+
+document.querySelector("#btnColor").addEventListener("click", () => {
+  const txtCollection = document.querySelectorAll("h2");
+  for (const itemH2 of txtCollection) {
+    if (Number(itemH2.innerText) < 25) {
+      itemH2.innerText = "young";
+    }
+  }
+});
